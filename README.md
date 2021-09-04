@@ -4,10 +4,24 @@
 
 
 
-eCharts
+## eCharts
 https://echarts.apache.org/examples/en/index.html
 eCharts - v4
 https://echarts.apache.org/v4/examples/en/index.html
+
+## ECharts for React
+https://www.npmjs.com/package/echarts-for-react
+https://git.hust.cc/echarts-for-react/
+https://git.hust.cc/echarts-for-react/examples/dynamic
+https://github.com/hustcc/echarts-for-react/blob/master/docs/examples/api.md
+
+
+# lodash.clonedeep v4.5.0
+https://www.npmjs.com/package/lodash.clonedeep
+npm i --save lodash.clonedeep
+
+
+
 ----
 
 # Getting Started with Create React App
