@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import 'ag-grid-community/dist/styles/ag-grid.css'
+import 'ag-grid-community/dist/styles/ag-theme-balham.css'
+import './App.css'
+import './ag-grid.css'
+
+import PageDailySales from './pages/page_daily_sales'
+import Items from './pages/page_items'
+import Transactions from './pages/page_transactions'
+import PageFront from './pages/page_front'
+import PageEcharts from './pages/page_echarts'
+
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <BrowserRouter>
+      <Switch>
+        <Route path="/echarts" exact component={PageEcharts} />
+        <Route path="/dailysales" exact component={PageDailySales} />
+        <Route path="/items" exact component={Items} />
+        <Route path="/transactions" exact component={Transactions} />
+        <Route path="/" exact component={PageFront} />
+      </Switch>
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App

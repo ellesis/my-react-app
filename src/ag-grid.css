@@ -1,0 +1,6 @@
+.ag-header-cell {
+  background-color: #236192;
+  background-color: var(--ag-foreground-color, #236192);
+  color: #fff;
+  color: var(--ag-background-color, #fff);
+}
