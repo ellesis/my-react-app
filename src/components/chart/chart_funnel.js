@@ -30,22 +30,18 @@ const ChartFunnel = (props) => {
         left: '10%',
         width: '80%',
         label: {
-          normal: {
-            formatter: '{b}预期',
-          },
-          emphasis: {
-            position: 'inside',
-            formatter: '{b}预期: {c}%',
-          },
+          formatter: '{b}预期',
         },
         labelLine: {
-          normal: {
-            show: false,
-          },
+          show: false,
         },
         itemStyle: {
-          normal: {
-            opacity: 0.7,
+          opacity: 0.7,
+        },
+        emphasis: {
+          label: {
+            position: 'inside',
+            formatter: '{b}预期: {c}%',
           },
         },
         data: [
@@ -63,23 +59,19 @@ const ChartFunnel = (props) => {
         width: '80%',
         maxSize: '80%',
         label: {
-          normal: {
-            position: 'inside',
-            formatter: '{c}%',
-            textStyle: {
-              color: '#fff',
-            },
-          },
-          emphasis: {
-            position: 'inside',
-            formatter: '{b}实际: {c}%',
-          },
+          position: 'inside',
+          formatter: '{c}%',
+          color: '#fff',
         },
         itemStyle: {
-          normal: {
-            opacity: 0.5,
-            borderColor: '#fff',
-            borderWidth: 2,
+          opacity: 0.5,
+          borderColor: '#fff',
+          borderWidth: 2,
+        },
+        emphasis: {
+          label: {
+            position: 'inside',
+            formatter: '{b}实际: {c}%',
           },
         },
         data: [
@@ -89,6 +81,8 @@ const ChartFunnel = (props) => {
           { value: 50, name: '点击' },
           { value: 80, name: '展现' },
         ],
+        // Ensure outer shape will not be over inner shape when hover.
+        z: 100,
       },
     ],
   }

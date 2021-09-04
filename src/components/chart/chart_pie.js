@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import ReactEcharts from 'echarts-for-react'
 
-//<ChartPie title="Daily Sales Chart"></ChartPie>
-
 const ChartPie = (props) => {
   const { title } = props
 
@@ -10,32 +8,29 @@ const ChartPie = (props) => {
     title: {
       text: '某站点用户访问来源',
       subtext: '纯属虚构',
-      x: 'center',
+      left: 'center',
     },
     tooltip: {
       trigger: 'item',
-      formatter: '{a} <br/>{b} : {c} ({d}%)',
     },
     legend: {
       orient: 'vertical',
       left: 'left',
-      data: ['直接访问', '邮件营销', '联盟广告', '视频广告', '搜索引擎'],
     },
     series: [
       {
         name: '访问来源',
         type: 'pie',
-        radius: '55%',
-        center: ['50%', '60%'],
+        radius: '50%',
         data: [
-          { value: 335, name: '直接访问' },
-          { value: 310, name: '邮件营销' },
-          { value: 234, name: '联盟广告' },
-          { value: 135, name: '视频广告' },
-          { value: 1548, name: '搜索引擎' },
+          { value: 1048, name: '搜索引擎' },
+          { value: 735, name: '直接访问' },
+          { value: 580, name: '邮件营销' },
+          { value: 484, name: '联盟广告' },
+          { value: 300, name: '视频广告' },
         ],
-        itemStyle: {
-          emphasis: {
+        emphasis: {
+          itemStyle: {
             shadowBlur: 10,
             shadowOffsetX: 0,
             shadowColor: 'rgba(0, 0, 0, 0.5)',
@@ -44,7 +39,6 @@ const ChartPie = (props) => {
       },
     ],
   }
-
   const [count, setCount] = useState(0)
   function onChartReady(echarts) {
     console.log('echarts is ready', echarts)

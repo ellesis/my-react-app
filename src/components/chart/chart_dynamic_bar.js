@@ -1,7 +1,8 @@
 // https://git.hust.cc/echarts-for-react/examples/dynamic
+
 import React, { useState, useEffect } from 'react'
 import ReactEcharts from 'echarts-for-react'
-// import cloneDeep from 'lodash.clonedeep'
+import cloneDeep from 'lodash.clonedeep'
 
 //<ChartDynamicBar title="Daily Sales Chart"></ChartDynamicBar>
 
@@ -16,7 +17,7 @@ const ChartDynamicBar = (props) => {
       trigger: 'axis',
     },
     legend: {
-      data: ['aaa', 'bbb'],
+      data: ['最新成交价', '预购队列'],
     },
     toolbox: {
       show: true,
@@ -158,10 +159,10 @@ const ChartDynamicBar = (props) => {
   const [option, setOption] = useState(DEFAULT_OPTION)
   function fetchNewData() {
     const axisData = new Date().toLocaleTimeString().replace(/^\D*/, '')
-    // const newOption = cloneDeep(option); // immutable => cloneDeep changed
-    // const newOption = { ...option } // immutable => no realtime update
-    // const newOption = Object.assign({}, option) // immutable => no realtime update
-    const newOption = JSON.parse(JSON.stringify(option)) // immutable => realtime update ok - deepcopy ok
+    const newOption = cloneDeep(option) // immutable => cloneDeep changed
+    // const newOption = { ...option } // immutable => no realtime update: shallow copy
+    // const newOption = Object.assign({}, option) // immutable => no realtime update: shallow copy
+    // const newOption = JSON.parse(JSON.stringify(option)) // immutable => realtime update ok - deepcopy ok - show up error - copy not all
 
     newOption.title.text = 'Hello Echarts-for-react.' + new Date().getSeconds()
     const data0 = newOption.series[0].data
