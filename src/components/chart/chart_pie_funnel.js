@@ -5,7 +5,7 @@ const ChartPieFunnel = (props) => {
   const { title } = props
 
   //Import json file. Used in {options}.
-  const data = require('./data')
+  const data = require('../../data/pie_funnel_data')
 
   //Array of names for legend in {options}
   const dataNames = data.map((i) => i.name)

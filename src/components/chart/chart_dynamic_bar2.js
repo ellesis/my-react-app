@@ -5,8 +5,8 @@ import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import ReactEcharts from 'echarts-for-react'
 
-import { populationDataFemale } from './data/data_female'
-import { populationDataMale } from './data/data_male'
+import { populationDataFemale } from '../../data/data_female'
+import { populationDataMale } from '../../data/data_male'
 
 class ChartDynamicBar2 extends Component {
   getOption = () => {
