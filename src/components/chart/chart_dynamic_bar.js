@@ -6,9 +6,7 @@ import cloneDeep from 'lodash.clonedeep'
 
 //<ChartDynamicBar title="Daily Sales Chart"></ChartDynamicBar>
 
-const ChartDynamicBar = (props) => {
-  const { title } = props
-
+const ChartDynamicBar = ({ title }) => {
   //Chart style
   const style = {
     height: '80vh',

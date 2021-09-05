@@ -3,9 +3,7 @@
 import React from 'react'
 import ReactEcharts from 'echarts-for-react'
 
-const ChartBarWithTooltipInfo = (props) => {
-  const { title } = props
-
+const ChartBarWithTooltipInfo = ({ title }) => {
   const option = {
     tooltip: {
       trigger: 'item',

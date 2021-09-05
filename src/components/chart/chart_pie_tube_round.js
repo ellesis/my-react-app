@@ -3,9 +3,7 @@
 import React from 'react'
 import ReactEcharts from 'echarts-for-react'
 
-const ChartPieTubeRound = (props) => {
-  const { title } = props
-
+const ChartPieTubeRound = ({ title }) => {
   const option = {
     tooltip: {
       trigger: 'item',

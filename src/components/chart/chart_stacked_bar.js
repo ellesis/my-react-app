@@ -3,9 +3,7 @@
 import React from 'react'
 import ReactEcharts from 'echarts-for-react'
 
-const ChartStackedBar = (props) => {
-  const { title } = props
-
+const ChartStackedBar = ({ title }) => {
   const option = {
     tooltip: {
       trigger: 'axis',

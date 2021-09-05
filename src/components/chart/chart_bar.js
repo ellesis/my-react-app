@@ -3,9 +3,7 @@ import ReactEcharts from 'echarts-for-react'
 
 //<ChartBar title="Sales by Category Chart"></ChartBar>
 
-const ChartBar = (props) => {
-  const { title } = props
-
+const ChartBar = ({ title }) => {
   const option = {
     xAxis: {
       type: 'category',

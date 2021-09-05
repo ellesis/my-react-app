@@ -3,9 +3,7 @@ import ReactEcharts from 'echarts-for-react'
 
 // <ChartLine title="Daily Sales Chart"></ChartLine>
 
-const ChartLine = (props) => {
-  const { title } = props
-
+const ChartLine = ({ title }) => {
   const option1 = {
     toolbox: {
       feature: {

@@ -1,9 +1,7 @@
 import React from 'react'
 import ReactEcharts from 'echarts-for-react'
 
-const ChartPieDynamicRose = (props) => {
-  const { title } = props
-
+const ChartPieDynamicRose = ({ title }) => {
   //Import json file. Used in {options}.
   const data = require('../../data/pie_funnel_data')
 

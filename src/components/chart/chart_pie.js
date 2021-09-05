@@ -1,9 +1,7 @@
 import React, { useState } from 'react'
 import ReactEcharts from 'echarts-for-react'
 
-const ChartPie = (props) => {
-  const { title } = props
-
+const ChartPie = ({ title }) => {
   const option = {
     title: {
       text: '某站点用户访问来源',

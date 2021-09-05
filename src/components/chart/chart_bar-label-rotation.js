@@ -4,9 +4,7 @@ import React from 'react'
 import ReactEcharts from 'echarts-for-react'
 
 //<ChartBarLabelRotation title="Daily Sales Chart"></ChartBarLabelRotation>
-const ChartBarLabelRotation = (props) => {
-  const { title } = props
-
+const ChartBarLabelRotation = ({ title }) => {
   var app = {}
 
   var posList = [

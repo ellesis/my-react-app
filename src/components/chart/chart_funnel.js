@@ -1,9 +1,7 @@
 import React, { useRef } from 'react'
 import ReactEcharts from 'echarts-for-react'
 
-const ChartFunnel = (props) => {
-  const { title } = props
-
+const ChartFunnel = ({ title }) => {
   const option = {
     title: {
       text: '漏斗图',

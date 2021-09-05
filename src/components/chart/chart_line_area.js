@@ -1,9 +1,7 @@
 import React from 'react'
 import ReactEcharts from 'echarts-for-react'
 
-const ChartLineArea = (props) => {
-  const { title } = props
-
+const ChartLineArea = ({ title }) => {
   const option = {
     title: {
       text: '',

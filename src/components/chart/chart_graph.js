@@ -3,9 +3,7 @@ import ReactEcharts from 'echarts-for-react'
 
 //<ChartGraph title="Daily Sales Chart"></ChartGraph>
 
-const ChartGraph = (props) => {
-  const { title } = props
-
+const ChartGraph = ({ title }) => {
   //Chart style
   const style = {
     height: '80vh',
