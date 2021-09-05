@@ -3,7 +3,7 @@
 import React from 'react'
 import ReactEcharts from 'echarts-for-react'
 
-const ChartLine2 = (props) => {
+const ChartBarWithTooltipInfo = (props) => {
   const { title } = props
 
   const option = {
@@ -68,4 +68,4 @@ const ChartLine2 = (props) => {
   )
 }
 
-export default ChartLine2
+export default ChartBarWithTooltipInfo

@@ -6,6 +6,12 @@ import ReactEcharts from 'echarts-for-react'
 const ChartGraph = (props) => {
   const { title } = props
 
+  //Chart style
+  const style = {
+    height: '80vh',
+    width: '100%',
+  }
+
   const webkitDep = {
     type: 'force',
     categories: [
@@ -1354,7 +1360,7 @@ const ChartGraph = (props) => {
   return (
     <div className="py-5 col-6 card mt-2 mb-2 rounded-3 shadow-sm">
       <h3>{title}</h3>
-      <ReactEcharts option={option} />
+      <ReactEcharts option={option} style={style} />
     </div>
   )
 }

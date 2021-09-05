@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactEcharts from 'echarts-for-react'
 
-const ChartPieFunnel = (props) => {
+const ChartPieDynamicRose = (props) => {
   const { title } = props
 
   //Import json file. Used in {options}.
@@ -179,4 +179,4 @@ const ChartPieFunnel = (props) => {
   )
 }
 
-export default ChartPieFunnel
+export default ChartPieDynamicRose

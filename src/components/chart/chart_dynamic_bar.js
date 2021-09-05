@@ -9,6 +9,12 @@ import cloneDeep from 'lodash.clonedeep'
 const ChartDynamicBar = (props) => {
   const { title } = props
 
+  //Chart style
+  const style = {
+    height: '80vh',
+    width: '100%',
+  }
+
   const DEFAULT_OPTION = {
     title: {
       text: 'Hello Echarts-for-react.',
@@ -187,7 +193,7 @@ const ChartDynamicBar = (props) => {
   return (
     <div className="py-5 col-6 card mt-2 mb-2 rounded-3 shadow-sm">
       <h3>{title}</h3>
-      <ReactEcharts option={option} />
+      <ReactEcharts option={option} style={style} />
     </div>
   )
 }

@@ -11,6 +11,11 @@ const ChartPieTube = (props) => {
       trigger: 'item',
       formatter: '{a} <br/>{b}: {c} ({d}%)',
     },
+    toolbox: {
+      feature: {
+        saveAsImage: {},
+      },
+    },
     legend: {
       orient: 'vertical',
       left: 10,

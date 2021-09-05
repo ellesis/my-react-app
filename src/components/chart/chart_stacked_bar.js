@@ -15,7 +15,7 @@ const ChartStackedBar = (props) => {
       },
     },
     legend: {
-      data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+      data: ['Direct', 'Mail Ad', 'Affiliate Ad', 'Video Ad', 'Search Engine'],
     },
     grid: {
       left: '3%',

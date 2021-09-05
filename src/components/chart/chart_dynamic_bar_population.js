@@ -2,13 +2,12 @@
 // https://medium.com/@mailjontay/make-a-dynamic-chart-with-react-and-echarts-a-simple-tutorial-92a5c3c053a2
 
 import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
 import ReactEcharts from 'echarts-for-react'
 
 import { populationDataFemale } from '../../data/data_female'
 import { populationDataMale } from '../../data/data_male'
 
-class ChartDynamicBar2 extends Component {
+class ChartDynamicBarPopulation extends Component {
   getOption = () => {
     let districts = []
     let years = []
@@ -166,8 +165,15 @@ class ChartDynamicBar2 extends Component {
   }
 
   render() {
-    return <ReactEcharts option={this.getOption()} style={{ height: '80vh', left: 50, top: 50, width: '90vw' }} opts={{ renderer: 'svg' }} />
+    const { title } = this.props
+
+    return (
+      <div className="py-4 col-12 card mt-2 mb-2 rounded-3 shadow-sm">
+        <h3>{title}</h3>
+        <ReactEcharts option={this.getOption()} style={{ height: '90vh', left: 50, top: 50, width: '80vw' }} opts={{ renderer: 'svg' }} />
+      </div>
+    )
   }
 }
 
-export default ChartDynamicBar2
+export default ChartDynamicBarPopulation

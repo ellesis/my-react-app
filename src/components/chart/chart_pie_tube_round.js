@@ -3,7 +3,7 @@
 import React from 'react'
 import ReactEcharts from 'echarts-for-react'
 
-const ChartPieTube2 = (props) => {
+const ChartPieTubeRound = (props) => {
   const { title } = props
 
   const option = {
@@ -66,4 +66,4 @@ const ChartPieTube2 = (props) => {
   )
 }
 
-export default ChartPieTube2
+export default ChartPieTubeRound
