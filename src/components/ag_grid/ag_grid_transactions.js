@@ -96,8 +96,9 @@ const AgGridTransactions = () => {
     setGridColumnApi(params.columnApi)
 
     // grid api data call
+    const url = `${process.env.REACT_APP_SABIS_API_SERVER}/transactions`
     axios
-      .get('https://saiapi.starliz.com/transactions')
+      .get(url)
       .then((res) => {
         console.log('>>> : onGridReady -> res', res)
         params.api.applyTransaction({ add: res.data.data })
