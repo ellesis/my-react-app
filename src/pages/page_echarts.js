@@ -1,6 +1,9 @@
 import React from 'react'
 import Layout from '../components/layout'
 
+//e-Charts components
+import ChartGradeGauge from '../components/chart/ChartGradeGauge'
+
 import ChartLine from '../components/chart/chart_line'
 
 import ChartBar from '../components/chart/chart_bar'
@@ -27,6 +30,9 @@ function PageEcharts() {
   return (
     <Layout>
       <div className="row">
+        <div style={{ width: '500px', height: '500px' }}>
+          <ChartGradeGauge title="Grade Gauge"></ChartGradeGauge>
+        </div>
         <ChartLine title="Line Chart"></ChartLine>
         <ChartLineArea title="Multi Line Chart"></ChartLineArea>
       </div>
