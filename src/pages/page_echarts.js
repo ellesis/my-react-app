@@ -3,6 +3,7 @@ import Layout from '../components/layout'
 
 //e-Charts components
 import ChartGradeGauge from '../components/chart/ChartGradeGauge'
+import ChartCandlestickIndex from '../components/chart/ChartCandlestickIndex'
 
 import ChartLine from '../components/chart/chart_line'
 
@@ -29,21 +30,32 @@ import ChartGraph from '../components/chart/chart_graph'
 function PageEcharts() {
   return (
     <Layout>
-      <div className="row">
-        <div style={{ width: '500px', height: '500px' }}>
-          <ChartGradeGauge title="Grade Gauge"></ChartGradeGauge>
+      <div className="row p-4">
+        <div className="col-12" style={{ height: '500px' }}>
+          <ChartCandlestickIndex title="Shanghai Index"></ChartCandlestickIndex>
         </div>
-        <ChartLine title="Line Chart"></ChartLine>
-        <ChartLineArea title="Multi Line Chart"></ChartLineArea>
+      </div>
+      <hr />
+      <div className="row">
+        <div className="col-12"> Moving Average (MA)</div>
       </div>
 
+      <div className="row">
+        <div style={{ width: '500px', height: '500px' }}>
+          <ChartGradeGauge title="ChartGradeGauge"></ChartGradeGauge>
+        </div>
+      </div>
+
+      <div className="row">
+        <ChartLine title="ChartLine"></ChartLine>
+        <ChartLineArea title="ChartLineArea - Multi Line Chart"></ChartLineArea>
+      </div>
       <div className="row">
         <ChartBar title="Bar Chart"></ChartBar>
         <ChartBarWithTooltipInfo title="Line Chart"></ChartBarWithTooltipInfo>
         <ChartStackedBar title="Stacked Bar Chart"></ChartStackedBar>
         <ChartBarLabelRotation title="Bar Label Rotation Chart"></ChartBarLabelRotation>
       </div>
-
       <div className="row">
         <ChartPie title="Pie Chart"></ChartPie>
         <ChartPieRose title="Pie Funnel Chart"></ChartPieRose>
@@ -52,11 +64,9 @@ function PageEcharts() {
         <ChartPieTube title="Pie Chart Tube"></ChartPieTube>
         <ChartPieTubeRound title="Pie Chart Tube Round"></ChartPieTubeRound>
       </div>
-
       <div className="row">
         <ChartFunnel title="Funnel Chart"></ChartFunnel>
       </div>
-
       <div className="row">
         <ChartDynamicBarPopulation title="Dynamic Bar Chart Population"></ChartDynamicBarPopulation>
 

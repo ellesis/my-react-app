@@ -6,14 +6,14 @@ const ChartPie = ({ title }) => {
     title: {
       text: '某站点用户访问来源',
       subtext: '纯属虚构',
-      left: 'center',
+      left: 'center'
     },
     tooltip: {
-      trigger: 'item',
+      trigger: 'item'
     },
     legend: {
       orient: 'vertical',
-      left: 'left',
+      left: 'left'
     },
     series: [
       {
@@ -25,18 +25,19 @@ const ChartPie = ({ title }) => {
           { value: 735, name: '直接访问' },
           { value: 580, name: '邮件营销' },
           { value: 484, name: '联盟广告' },
-          { value: 300, name: '视频广告' },
+          { value: 300, name: '视频广告' }
         ],
         emphasis: {
           itemStyle: {
             shadowBlur: 10,
             shadowOffsetX: 0,
-            shadowColor: 'rgba(0, 0, 0, 0.5)',
-          },
-        },
-      },
-    ],
+            shadowColor: 'rgba(0, 0, 0, 0.5)'
+          }
+        }
+      }
+    ]
   }
+
   const [count, setCount] = useState(0)
   function onChartReady(echarts) {
     console.log('echarts is ready', echarts)
@@ -58,7 +59,7 @@ const ChartPie = ({ title }) => {
         onChartReady={onChartReady}
         onEvents={{
           click: onChartClick,
-          legendselectchanged: onChartLegendselectchanged,
+          legendselectchanged: onChartLegendselectchanged
         }}
       />
       <div>Click Count: {count}</div>

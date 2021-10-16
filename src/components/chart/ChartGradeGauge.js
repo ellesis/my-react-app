@@ -1,8 +1,6 @@
 import React from 'react'
 import ReactEcharts from 'echarts-for-react'
 
-//<ChartBar title="Sales by Category Chart"></ChartBar>
-
 const ChartGradeGauge = ({ title }) => {
   const option = {
     series: [
@@ -52,7 +50,7 @@ const ChartGradeGauge = ({ title }) => {
           distance: -80,
           formatter: function (value) {
             if (value === 0.875) {
-              return 'Heigh'
+              return '  Heigh'
             } else if (value === 0.5) {
               return 'Medium'
             } else if (value === 0.125) {
@@ -70,14 +68,15 @@ const ChartGradeGauge = ({ title }) => {
           offsetCenter: [0, '0%'],
           valueAnimation: true,
           formatter: function (value) {
-            return Math.round(value * 100) + 'Risk'
+            // return 'Risk' + Math.round(value * 100)
+            return Math.round(value * 100)
           },
           color: 'auto'
         },
         data: [
           {
-            value: 0.8,
-            name: 'Value Rating'
+            name: 'Risk Value',
+            value: 0.5
           }
         ]
       }

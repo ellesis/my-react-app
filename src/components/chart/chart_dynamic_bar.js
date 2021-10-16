@@ -10,37 +10,37 @@ const ChartDynamicBar = ({ title }) => {
   //Chart style
   const style = {
     height: '80vh',
-    width: '100%',
+    width: '100%'
   }
 
   const DEFAULT_OPTION = {
     title: {
-      text: 'Hello Echarts-for-react.',
+      text: 'Hello Echarts-for-react.'
     },
     tooltip: {
-      trigger: 'axis',
+      trigger: 'axis'
     },
     legend: {
-      data: ['最新成交价', '预购队列'],
+      data: ['最新成交价', '预购队列']
     },
     toolbox: {
       show: true,
       feature: {
         dataView: { readOnly: false },
         restore: {},
-        saveAsImage: {},
-      },
+        saveAsImage: {}
+      }
     },
     grid: {
       top: 60,
       left: 30,
       right: 60,
-      bottom: 30,
+      bottom: 30
     },
     dataZoom: {
       show: false,
       start: 0,
-      end: 100,
+      end: 100
     },
     visualMap: {
       show: false,
@@ -67,8 +67,8 @@ const ChartDynamicBar = ({ title }) => {
         '#0AA344',
         '#0C8918',
         '#057748',
-        '#177CB0',
-      ],
+        '#177CB0'
+      ]
     },
     xAxis: [
       {
@@ -83,7 +83,7 @@ const ChartDynamicBar = ({ title }) => {
             now = new Date(now - 2000)
           }
           return res
-        })(),
+        })()
       },
       {
         type: 'category',
@@ -95,8 +95,8 @@ const ChartDynamicBar = ({ title }) => {
             res.push(50 - len + 1)
           }
           return res
-        })(),
-      },
+        })()
+      }
     ],
     yAxis: [
       {
@@ -105,7 +105,7 @@ const ChartDynamicBar = ({ title }) => {
         name: '价格',
         max: 20,
         min: 0,
-        boundaryGap: [0.2, 0.2],
+        boundaryGap: [0.2, 0.2]
       },
       {
         type: 'value',
@@ -113,8 +113,8 @@ const ChartDynamicBar = ({ title }) => {
         name: '预购量',
         max: 1200,
         min: 0,
-        boundaryGap: [0.2, 0.2],
-      },
+        boundaryGap: [0.2, 0.2]
+      }
     ],
     series: [
       {
@@ -124,8 +124,8 @@ const ChartDynamicBar = ({ title }) => {
         yAxisIndex: 1,
         itemStyle: {
           normal: {
-            barBorderRadius: 4,
-          },
+            barBorderRadius: 4
+          }
         },
         animationEasing: 'elasticOut',
         animationDelay: function (idx) {
@@ -141,7 +141,7 @@ const ChartDynamicBar = ({ title }) => {
             res.push(Math.round(Math.random() * 1000))
           }
           return res
-        })(),
+        })()
       },
       {
         name: '最新成交价',
@@ -154,9 +154,9 @@ const ChartDynamicBar = ({ title }) => {
             len++
           }
           return res
-        })(),
-      },
-    ],
+        })()
+      }
+    ]
   }
 
   let count
@@ -169,12 +169,14 @@ const ChartDynamicBar = ({ title }) => {
     // const newOption = JSON.parse(JSON.stringify(option)) // immutable => realtime update ok - deepcopy ok - show up error - copy not all
 
     newOption.title.text = 'Hello Echarts-for-react.' + new Date().getSeconds()
+    // data 수정하기
     const data0 = newOption.series[0].data
     const data1 = newOption.series[1].data
     data0.shift()
     data0.push(Math.round(Math.random() * 1000))
     data1.shift()
     data1.push((Math.random() * 10 + 5).toFixed(1) - 0)
+
     newOption.xAxis[0].data.shift()
     newOption.xAxis[0].data.push(axisData)
     newOption.xAxis[1].data.shift()
