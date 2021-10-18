@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+.tracker-gauge {
+  overflow: hidden;
+  height: 340px;
+}
+
+/* div.tracker-gauge {
+  height: 500px;
+} */

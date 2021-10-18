@@ -30,8 +30,8 @@ import ChartGraph from '../components/chart/chart_graph'
 function PageEcharts() {
   return (
     <Layout>
-      <div className="row p-4">
-        <div className="col-12" style={{ height: '500px' }}>
+      <div className="row p-4" style={{ height: '500px' }}>
+        <div className="col-12">
           <ChartCandlestickIndex title="Shanghai Index"></ChartCandlestickIndex>
         </div>
       </div>
@@ -41,7 +41,7 @@ function PageEcharts() {
       </div>
 
       <div className="row">
-        <div style={{ width: '500px', height: '500px' }}>
+        <div style={{ width: '500px' }}>
           <ChartGradeGauge title="ChartGradeGauge"></ChartGradeGauge>
         </div>
       </div>
