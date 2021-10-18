@@ -84,7 +84,12 @@ const ChartGradeGauge = ({ title }) => {
   }
 
   return (
-    <div className="tracker-gauge">
+    <div
+      style={{
+        overflow: 'hidden',
+        height: '340px'
+      }}
+    >
       <ReactEcharts
         option={option}
         style={{
