@@ -6,6 +6,7 @@ const ChartGradeGauge = ({ title }) => {
     series: [
       {
         type: 'gauge',
+        // gauge angle 설정 & value
         startAngle: 180,
         endAngle: 0,
         min: 0,
@@ -14,6 +15,7 @@ const ChartGradeGauge = ({ title }) => {
         axisLine: {
           lineStyle: {
             width: 40,
+            //gauge color 설정
             color: [
               [0.3, '#43C716'],
               [0.7, '#FFC712'],
@@ -44,13 +46,14 @@ const ChartGradeGauge = ({ title }) => {
             width: 5
           }
         },
+
         axisLabel: {
           color: '#464646',
           fontSize: 20,
           distance: -80,
           formatter: function (value) {
             if (value === 0.875) {
-              return '  Heigh'
+              return '  High'
             } else if (value === 0.5) {
               return 'Medium'
             } else if (value === 0.125) {
@@ -59,13 +62,15 @@ const ChartGradeGauge = ({ title }) => {
             return ''
           }
         },
+        // Risk Value 출력하는 것 위치 설정 가능
         title: {
-          offsetCenter: [0, '-20%'],
+          offsetCenter: [0, '-8%'],
           fontSize: 30
         },
+        // Value 출력하는 위치 & format 설정
         detail: {
-          fontSize: 40,
-          offsetCenter: [0, '0%'],
+          fontSize: 30,
+          offsetCenter: [0, '15%'], // value 출력하는 위치
           valueAnimation: true,
           formatter: function (value) {
             // return 'Risk' + Math.round(value * 100)
@@ -83,11 +88,12 @@ const ChartGradeGauge = ({ title }) => {
     ]
   }
 
+  // 여기서 gauge의 하단 hidden되는 위치를 설정해 주어야 한다.
   return (
     <div
       style={{
         overflow: 'hidden',
-        height: '340px'
+        height: '400px'
       }}
     >
       <ReactEcharts
