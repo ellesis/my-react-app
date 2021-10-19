@@ -3959,11 +3959,11 @@ p {
     position: relative;
   }
 }
-@media (-ms-high-contrast: active), only screen and (min-width: 768px) and all and (-ms-high-contrast: none) {
+/* @media (-ms-high-contrast: active), only screen and (min-width: 768px) and all and (-ms-high-contrast: none) {
   ._5D49su {
     height: inherit;
   }
-}
+} */
 ._2bEUSB {
   overflow-y: scroll;
   margin: 1rem;
