@@ -3,21 +3,21 @@ import ReactEcharts from 'echarts-for-react'
 
 const ChartPieRose = ({ title }) => {
   //Import json file. Used in {options}.
-  const data = require('../../data/pie_funnel_data')
+  // const data = require('../../data/pie_funnel_data')
 
   //Array of names for legend in {options}
-  const dataNames = data.map((i) => i.name)
+  // const dataNames = data.map((i) => i.name)
 
   //Chart style
   const style = {
     height: '90vh',
-    width: '100%',
+    width: '100%'
   }
 
   //Chart options
   let option = {
     legend: {
-      top: 'bottom',
+      top: 'bottom'
     },
     toolbox: {
       show: true,
@@ -25,8 +25,8 @@ const ChartPieRose = ({ title }) => {
         mark: { show: true },
         dataView: { show: true, readOnly: false },
         restore: { show: true },
-        saveAsImage: { show: true },
-      },
+        saveAsImage: { show: true }
+      }
     },
     series: [
       {
@@ -36,7 +36,7 @@ const ChartPieRose = ({ title }) => {
         center: ['50%', '50%'],
         roseType: 'area',
         itemStyle: {
-          borderRadius: 8,
+          borderRadius: 8
         },
         data: [
           { value: 40, name: 'rose 1' },
@@ -46,10 +46,10 @@ const ChartPieRose = ({ title }) => {
           { value: 28, name: 'rose 5' },
           { value: 26, name: 'rose 6' },
           { value: 22, name: 'rose 7' },
-          { value: 18, name: 'rose 8' },
-        ],
-      },
-    ],
+          { value: 18, name: 'rose 8' }
+        ]
+      }
+    ]
   }
 
   return (
