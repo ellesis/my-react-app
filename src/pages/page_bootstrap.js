@@ -1,12 +1,10 @@
-import { useState, useEffect, useRef } from 'react'
-import { Collapse, Popover, Toast, Tooltip, Alert, Modal, Dropdown } from 'bootstrap'
-
+import React, { useState, useEffect, useRef } from 'react'
+// https://www.codeply.com/p/IdzoX6osI2 예제로부터 가져옴
+import { Popover, Toast, Tooltip, Alert, Dropdown } from 'bootstrap'
 // const { useState, useEffect, useRef } = React
 // const { Collapse, Popover, Toast, Tooltip, Alert, Modal, Dropdown } = bootstrap
 
-import React from 'react'
 import Layout from '../components/layout'
-import Content from '../components/content'
 
 function CollapseDemo() {
   return (
@@ -30,6 +28,7 @@ function PopoverDemo() {
       title: 'My Popover',
       trigger: 'hover'
     })
+    console.info('#: PopoverDemo -> popover', popover)
   })
 
   return (
@@ -47,7 +46,7 @@ function ToastDemo() {
 
   useEffect(() => {
     var myToast = toastRef.current
-    var bsToast = bootstrap.Toast.getInstance(myToast)
+    var bsToast = Toast.getInstance(myToast)
 
     if (!bsToast) {
       // initialize Toast
@@ -59,7 +58,7 @@ function ToastDemo() {
       // toggle
       toast ? bsToast.show() : bsToast.hide()
     }
-  })
+  }, [toast])
 
   return (
     <div className="py-2">
@@ -87,6 +86,7 @@ function TooltipDemo() {
       placement: 'right',
       trigger: 'hover'
     })
+    console.info('#: TooltipDemo -> tooltip', tooltip)
   })
 
   return (
@@ -103,9 +103,11 @@ function AlertDemo() {
   const alertRef = useRef()
 
   const showAlert = () => {
+    // 맨처음 한번만 보여짐
+    console.log('>>>: showAlert -> showAlert')
     setMessage('Holy guacamole! This is my alert')
     const alertEle = alertRef.current
-    const bsAlert = new bootstrap.Alert(alertEle)
+    const bsAlert = new Alert(alertEle)
     alertEle.classList.add('show')
 
     // hide alert after 5 seconds
@@ -162,31 +164,33 @@ function ModalDemo() {
 }
 
 const DropdownDemo = () => {
+  console.log('>>>: DropdownDemo -> DropdownDemo')
   const ddRef = useRef()
 
   useEffect(() => {
     var dd = new Dropdown(ddRef.current, {})
+    console.info('#: DropdownDemo -> dd', dd)
   })
 
   return (
     <div className="py-2">
       <div className="dropdown">
-        <button className="btn btn-secondary dropdown-toggle" type="button" ref={ddRef} aria-expanded="false">
+        <button className="btn btn-secondary" type="button" ref={ddRef} aria-expanded="false" data-bs-toggle="dropdown">
           Dropdown button
         </button>
         <ul className="dropdown-menu" aria-labelledby="dropdown1">
           <li>
-            <a className="dropdown-item" href="#">
+            <a className="dropdown-item" href="#/">
               Action
             </a>
           </li>
           <li>
-            <a className="dropdown-item" href="#">
+            <a className="dropdown-item" href="#/">
               Another action
             </a>
           </li>
           <li>
-            <a className="dropdown-item" href="#">
+            <a className="dropdown-item" href="#/">
               Something else here
             </a>
           </li>
@@ -197,9 +201,10 @@ const DropdownDemo = () => {
 }
 
 function PageBootstrap() {
+  const [mounted, setMounted] = useState(true)
+
   return (
     <Layout>
-      const [mounted, setMounted] = useState(true) return (
       <div className="container py-4">
         <h3>Bootstrap 5 React Examples</h3>
         <h6>no jquery, no reactstrap, no react-bootstrap</h6>
@@ -215,7 +220,6 @@ function PageBootstrap() {
           </div>
         )}
       </div>
-      )
     </Layout>
   )
 }

@@ -5,7 +5,7 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
         <a className="navbar-brand" href="/">
-          Lisa React App(mui-4)
+          Lisa React App(mui-4, bootstrap5)
         </a>
 
         <div className="d-flex" id="navbarNav">
