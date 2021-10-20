@@ -1,14 +1,20 @@
 # Lisa React App
 
+- Material UI v4
+- Bootstrap v5
+- Bootstrap icon v5 - CDN
+- Angular Grid
+- eCharts v5
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ---
 
-# echarts
+# eCharts
 
-## echarts 관련 사이트
+## eCharts 관련 사이트
 
 https://echarts.apache.org/en/index.html
 https://echarts.apache.org/en/tutorial.html#Get%20Started%20with%20ECharts%20in%205%20minutes
@@ -17,7 +23,7 @@ https://git.hust.cc/echarts-for-react/
 https://github.com/hustcc/echarts-for-react
 https://www.npmjs.com/package/echarts-for-react
 
-## echars and react
+## eCharts and react
 
 설치하기
 $ npm install --save echarts echarts-for-react

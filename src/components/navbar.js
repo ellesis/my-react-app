@@ -5,7 +5,7 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
         <a className="navbar-brand" href="/">
-          Lisa React App
+          Lisa React App(mui-4)
         </a>
 
         <div className="d-flex" id="navbarNav">
@@ -28,6 +28,11 @@ const Navbar = () => {
             <li className="nav-item">
               <a className="nav-link" href="/items">
                 Items
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/bootstrap">
+                Bootstrap5
               </a>
             </li>
             <li className="nav-item">

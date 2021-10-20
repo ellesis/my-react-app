@@ -41,7 +41,8 @@ function PageEcharts() {
       </div>
 
       <div className="row">
-        <div style={{ width: '500px' }}>
+        <div className="col-6" style={{ width: '500px' }}>
+          <h3>Grade Gauge </h3>
           <ChartGradeGauge title="ChartGradeGauge"></ChartGradeGauge>
         </div>
       </div>

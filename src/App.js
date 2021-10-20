@@ -4,6 +4,7 @@ import 'ag-grid-community/dist/styles/ag-theme-balham.css'
 import './App.css'
 import './ag-grid.css'
 
+import PageBootstrap from './pages/page_bootstrap'
 import PageDailySales from './pages/page_daily_sales'
 import Items from './pages/page_items'
 import Transactions from './pages/page_transactions'
@@ -25,7 +26,7 @@ function App() {
         <Route path="/transactions" exact component={Transactions} />
         <Route path="/front" exact component={PageFront} />
         <Route path="/dashboard_admin" exact component={DashboardAdmin} />
-
+        <Route path="/bootstrap" exact component={PageBootstrap} />
         <Route path="/" exact component={PageFront} />
       </Switch>
     </BrowserRouter>

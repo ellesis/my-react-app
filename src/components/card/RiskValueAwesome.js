@@ -1,17 +1,26 @@
 import React from 'react'
 
 /**
- * Font Awesome
+ * Font Awesome RiskValue Card
  * https://fontawesome.com/v5.15/how-to-use/on-the-web/styling/sizing-icons
  */
 export default function RiskValueAwesome() {
   return (
     <>
       {/* arrow color and risk value */}
-      <div class="p-3">
+      <div class="p-3 border border-2 m-2">
         <div class="fa-lg text-center fw-bold lh-base" style={{ color: '#006b00' }}>
           <i class="fas fa-arrow-alt-circle-up"></i>
           &nbsp; Great Deal <br />
+          $10 Below <br />
+        </div>
+        <div class="text-center fw-bold">FalconUp's Instant Market Value of $130</div>
+      </div>
+
+      <div class="p-3 border border-2 m-2">
+        <div class="fa-lg text-center fw-bold lh-base" style={{ color: '#ff8400' }}>
+          <i class="fas fa-arrow-alt-circle-up" style={{ transform: 'rotate(135deg)' }}></i>
+          &nbsp; High Price <br />
           $10 Above <br />
         </div>
         <div class="text-center fw-bold">FalconUp's Instant Market Value of $130</div>
