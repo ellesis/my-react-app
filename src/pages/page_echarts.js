@@ -1,5 +1,5 @@
 import React from 'react'
-import Layout from '../components/layout'
+import DashboardLayout from '../components_dashboard_layout/dashboard_layout'
 
 //e-Charts components
 import ChartGradeGauge from '../components/chart/ChartGradeGauge'
@@ -29,7 +29,7 @@ import ChartGraph from '../components/chart/chart_graph'
 
 function PageEcharts() {
   return (
-    <Layout>
+    <DashboardLayout title="Lisa React App > eCharts">
       <div className="row p-4" style={{ height: '500px' }}>
         <div className="col-12">
           <ChartCandlestickIndex title="Shanghai Index"></ChartCandlestickIndex>
@@ -74,7 +74,7 @@ function PageEcharts() {
         <ChartDynamicBar title="Dynamic Bar Chart"></ChartDynamicBar>
         <ChartGraph title="Graph Chart"></ChartGraph>
       </div>
-    </Layout>
+    </DashboardLayout>
   )
 }
 

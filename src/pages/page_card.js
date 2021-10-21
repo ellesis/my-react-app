@@ -1,12 +1,11 @@
 import React from 'react'
-import Layout from '../components/layout'
-import Content from '../components/content'
+import DashboardLayout from '../components_dashboard_layout/dashboard_layout'
 
 function PageCard() {
   return (
-    <Layout>
+    <DashboardLayout title="Lisa React App >> Card">
       <div>page card</div>
-    </Layout>
+    </DashboardLayout>
   )
 }
 

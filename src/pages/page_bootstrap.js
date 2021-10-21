@@ -4,7 +4,10 @@ import { Popover, Toast, Tooltip, Alert, Dropdown } from 'bootstrap'
 // const { useState, useEffect, useRef } = React
 // const { Collapse, Popover, Toast, Tooltip, Alert, Modal, Dropdown } = bootstrap
 
+// import DashboardLayout from '../components_dashboard_layout/dashboard_layout'
 import Layout from '../components/layout'
+
+import Grid from '@material-ui/core/Grid'
 
 function CollapseDemo() {
   return (
@@ -205,21 +208,23 @@ function PageBootstrap() {
 
   return (
     <Layout>
-      <div className="container py-4">
-        <h3>Bootstrap 5 React Examples</h3>
-        <h6>no jquery, no reactstrap, no react-bootstrap</h6>
-        {mounted && (
-          <div>
-            <PopoverDemo />
-            <CollapseDemo />
-            <ToastDemo />
-            <TooltipDemo />
-            <AlertDemo />
-            <ModalDemo />
-            <DropdownDemo />
-          </div>
-        )}
-      </div>
+      <Grid item xs={12}>
+        <div className="container py-4">
+          <h3>Bootstrap 5 React Examples</h3>
+          <h6>no jquery, no reactstrap, no react-bootstrap</h6>
+          {mounted && (
+            <div>
+              <PopoverDemo />
+              <CollapseDemo />
+              <ToastDemo />
+              <TooltipDemo />
+              <AlertDemo />
+              <ModalDemo />
+              <DropdownDemo />
+            </div>
+          )}
+        </div>
+      </Grid>
     </Layout>
   )
 }

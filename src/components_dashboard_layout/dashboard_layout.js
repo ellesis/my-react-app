@@ -15,10 +15,10 @@ import Typography from '@material-ui/core/Typography'
 import Divider from '@material-ui/core/Divider'
 
 import Badge from '@material-ui/core/Badge'
-import Container from '@material-ui/core/Container'
 import MenuIcon from '@material-ui/icons/Menu'
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
 import NotificationsIcon from '@material-ui/icons/Notifications'
+import Container from '@material-ui/core/Container'
 
 import { mainListItems, secondaryListItems } from './listItems'
 
@@ -111,12 +111,13 @@ const DashboardLayout = ({ children, title }) => {
   const handleDrawerClose = () => {
     setOpen(false)
   }
-  // const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight)
+  const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight)
+  console.info('#: DashboardLayout -> fixedHeightPaper', fixedHeightPaper)
 
   return (
     <div className={classes.root}>
       <CssBaseline />
-
+      {/* top bar */}
       <AppBar position="absolute" className={clsx(classes.appBar, open && classes.appBarShift)}>
         <Toolbar className={classes.toolbar}>
           <IconButton
@@ -141,7 +142,7 @@ const DashboardLayout = ({ children, title }) => {
           <Button color="inherit">Login</Button>
         </Toolbar>
       </AppBar>
-
+      {/* left drawer */}
       <Drawer
         variant="permanent"
         classes={{
