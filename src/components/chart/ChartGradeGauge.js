@@ -132,14 +132,14 @@ const ChartGradeGauge = ({ title }) => {
     <div
       style={{
         overflow: 'hidden',
-        height: '350px'
+        height: '200px'
       }}
     >
       <ReactEcharts
         option={option}
         style={{
           width: '100%',
-          height: '500px'
+          height: '350px'
         }}
       />
     </div>

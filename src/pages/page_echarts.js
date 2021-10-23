@@ -36,6 +36,13 @@ function PageEcharts() {
         </div>
       </div>
       <hr />
+
+      <div className="row p-4" style={{ height: '500px' }}>
+        <div className="col-12">
+          <ChartCandlestickIndex title="Shanghai Index"></ChartCandlestickIndex>
+        </div>
+      </div>
+      <hr />
       <div className="row">
         <div className="col-12"> Moving Average (MA)</div>
       </div>
