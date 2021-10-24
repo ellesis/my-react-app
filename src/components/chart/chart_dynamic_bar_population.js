@@ -25,16 +25,16 @@ class ChartDynamicBarPopulation extends Component {
       obj['series'] = [
         {
           stack: 'group',
-          data: populationDataFemale[year],
+          data: populationDataFemale[year]
         },
         {
           stack: 'group',
-          data: populationDataMale[year],
-        },
+          data: populationDataMale[year]
+        }
       ]
 
       obj['title'] = {
-        text: `Population of Singapore by District, ${year}`,
+        text: `Population of Singapore by District, ${year}`
       }
 
       return obj
@@ -58,42 +58,42 @@ class ChartDynamicBarPopulation extends Component {
           label: {
             normal: {
               textStyle: {
-                color: '#aaa',
-              },
+                color: '#aaa'
+              }
             },
             emphasis: {
               textStyle: {
-                color: '#333',
-              },
-            },
+                color: '#333'
+              }
+            }
           },
           symbol: 'none',
           lineStyle: {
-            color: '#aaa',
+            color: '#aaa'
           },
           checkpointStyle: {
             color: '#354EF6',
             borderColor: 'transparent',
-            borderWidth: 2,
+            borderWidth: 2
           },
           controlStyle: {
             showNextBtn: false,
             showPrevBtn: false,
             normal: {
               color: '#354EF6',
-              borderColor: '#354EF6',
+              borderColor: '#354EF6'
             },
             emphasis: {
               color: '#5d71f7',
-              borderColor: '#5d71f7',
-            },
-          },
+              borderColor: '#5d71f7'
+            }
+          }
         },
         color: ['#e91e63', '#354EF6'],
         title: {
           subtext: 'Data from the Singapore Department of Statistics',
           textAlign: 'left',
-          left: '5%',
+          left: '5%'
         },
         tooltip: { backgroundColor: '#555', borderWidth: 0, padding: 10 },
         legend: {
@@ -101,7 +101,7 @@ class ChartDynamicBarPopulation extends Component {
           itemGap: 35,
           itemHeight: 18,
           right: '11%',
-          top: 20,
+          top: 20
         },
         calculable: true,
         grid: {
@@ -115,10 +115,10 @@ class ChartDynamicBarPopulation extends Component {
                 show: true,
                 formatter: function (params) {
                   return params.value.replace('\n', '')
-                },
-              },
-            },
-          },
+                }
+              }
+            }
+          }
         },
         xAxis: [
           {
@@ -129,38 +129,38 @@ class ChartDynamicBarPopulation extends Component {
                 baseline: 'top',
                 color: '#333',
                 fontSize: 10,
-                fontWeight: 'bold',
-              },
+                fontWeight: 'bold'
+              }
             },
             axisLine: { lineStyle: { color: '#aaa' }, show: true },
             axisTick: { show: false },
             data: districts,
             splitLine: { show: false },
-            type: 'category',
-          },
+            type: 'category'
+          }
         ],
         yAxis: [
           {
             axisLabel: {
-              textStyle: { fontSize: 10 },
+              textStyle: { fontSize: 10 }
             },
             axisLine: { show: false },
             axisTick: { show: false },
             name: 'Population',
             splitLine: {
               lineStyle: {
-                type: 'dotted',
-              },
+                type: 'dotted'
+              }
             },
-            type: 'value',
-          },
+            type: 'value'
+          }
         ],
         series: [
           { name: 'Female', type: 'bar' },
-          { name: 'Male', type: 'bar' },
-        ],
+          { name: 'Male', type: 'bar' }
+        ]
       },
-      options: options,
+      options: options
     }
   }
 
@@ -170,7 +170,11 @@ class ChartDynamicBarPopulation extends Component {
     return (
       <div className="py-4 col-12 card mt-2 mb-2 rounded-3 shadow-sm">
         <h3>{title}</h3>
-        <ReactEcharts option={this.getOption()} style={{ height: '90vh', left: 50, top: 50, width: '80vw' }} opts={{ renderer: 'svg' }} />
+        <ReactEcharts
+          option={this.getOption()}
+          style={{ height: '90vh', left: 50, top: 50, width: '80vw' }}
+          opts={{ renderer: 'svg' }}
+        />
       </div>
     )
   }

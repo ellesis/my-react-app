@@ -61,7 +61,6 @@ const ChartGradeGauge = ({ title }) => {
           fontSize: 20,
           distance: -70,
           formatter: function (value) {
-            console.log('>>>: ChartGradeGauge -> value', value)
             if (value === 0.9) {
               return '  High'
             } else if (value === 0.5) {

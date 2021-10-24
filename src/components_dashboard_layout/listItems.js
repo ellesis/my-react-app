@@ -5,7 +5,7 @@ import { ListItem, ListItemIcon, ListItemText, ListSubheader } from '@material-u
 
 // material-ui/icons
 // https://v4.mui.com/components/material-icons/#material-icons
-import DashboardIcon from '@material-ui/icons/Dashboard'
+// import DashboardIcon from '@material-ui/icons/Dashboard'
 import PeopleIcon from '@material-ui/icons/People'
 import BarChartIcon from '@material-ui/icons/BarChart'
 import AssignmentIcon from '@material-ui/icons/Assignment'

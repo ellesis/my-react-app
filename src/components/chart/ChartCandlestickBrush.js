@@ -1,7 +1,9 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import ReactEcharts from 'echarts-for-react'
+// import * as echarts from 'echarts'
+import * as echarts from 'echarts/core'
 
-const ChartCandlestickBrush = ({ title }) => {
+const ChartCandlestickBrush = () => {
   // var ROOT_PATH = 'https://echarts.apache.org/examples'
   const upColor = '#00da3c'
   const downColor = '#ec0000'
@@ -38,15 +40,12 @@ const ChartCandlestickBrush = ({ title }) => {
     return result
   }
 
-  const instance = useRef(null)
-
   // $.get(ROOT_PATH + '/data/asset/data/stock-DJI.json', function (rawData) {
   const rawData = require('../../data/stock-DJI.json')
   console.log('>>>: ChartCandlestickBrush -> rawData', rawData)
   const data = splitData(rawData)
-  // let myChart = instance.current.getEchartsInstance()
 
-  const option = {
+  const options = {
     animation: false,
     legend: {
       bottom: 10,
@@ -259,27 +258,40 @@ const ChartCandlestickBrush = ({ title }) => {
     ]
   }
 
-  // const instance = useRef(null)
+  // https://vasconez.dev/posts/1
+  const myChart = useRef(null)
+  useEffect(() => {
+    const chart = echarts.init(myChart.current)
+    chart.setOption(options)
+  }, [options])
 
-  // instance.current.getEchartsInstance().dispatchAction({
-  //   type: 'brush',
-  //   areas: [
-  //     {
-  //       brushType: 'lineX',
-  //       coordRange: ['2016-06-02', '2016-06-20'],
-  //       xAxisIndex: 0
-  //     }
-  //   ]
-  // })
+  myChart.dispatchAction({
+    type: 'brush',
+    areas: [
+      {
+        brushType: 'lineX',
+        coordRange: ['2016-06-02', '2016-06-20'],
+        xAxisIndex: 0
+      }
+    ]
+  })
 
   return (
-    <ReactEcharts
-      option={option}
+    <div
+      ref={myChart}
       style={{
-        height: '100%',
-        width: '100%'
+        width: '500',
+        height: '500'
       }}
-    />
+    ></div>
+    // <ReactEcharts
+    //   ref={myChart}
+    //   option={option}
+    //   style={{
+    //     height: '100%',
+    //     width: '100%'
+    //   }}
+    // />
   )
 }
 

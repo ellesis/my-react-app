@@ -160,7 +160,8 @@ const ChartDynamicBar = ({ title }) => {
   }
 
   let count
-  const [option, setOption] = useState(DEFAULT_OPTION)
+  const [option, setOption] = useState(DEFAULT_OPTION) // option 변경하기
+
   function fetchNewData() {
     const axisData = new Date().toLocaleTimeString().replace(/^\D*/, '')
     const newOption = cloneDeep(option) // immutable => cloneDeep changed

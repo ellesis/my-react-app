@@ -30,7 +30,7 @@ const ChartPieRose = ({ title }) => {
     },
     series: [
       {
-        name: '面积模式',
+        name: 'Area mode',
         type: 'pie',
         radius: [50, 250],
         center: ['50%', '50%'],
