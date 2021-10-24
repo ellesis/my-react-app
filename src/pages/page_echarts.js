@@ -4,7 +4,7 @@ import DashboardLayout from '../components_dashboard_layout/dashboard_layout'
 //e-Charts components
 import ChartGradeGauge from '../components/chart/ChartGradeGauge'
 import ChartCandlestickIndex from '../components/chart/ChartCandlestickIndex'
-// import ChartCandlestickBrush from '../components/chart/ChartCandlestickBrush'
+import ChartCandlestickBrush from '../components/chart/ChartCandlestickBrush'
 
 import ChartLine from '../components/chart/chart_line'
 
@@ -31,16 +31,17 @@ import ChartGraph from '../components/chart/chart_graph'
 import Chart from '../components/chart/chart'
 import line from '../components/chart/option/line'
 import bars from '../components/chart/option/bars'
-import ChartNew from '../components/chart/chart-new'
+// import ChartNew from '../components/chart/chart-new'
 
 function PageEcharts() {
   return (
     <DashboardLayout title="Lisa React App > eCharts">
-      <div className="row p-4">
-        <div style={{ width: '50%', height: 300 }}>
-          <ChartNew />
+      <div className="row p-4" style={{ height: '500px' }}>
+        <div className="col-12">
+          <ChartCandlestickBrush title="Shanghai Index"></ChartCandlestickBrush>
         </div>
       </div>
+      <hr />
 
       <div className="row p-4">
         <div style={{ width: '50%', height: 300 }}>
