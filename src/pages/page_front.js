@@ -32,15 +32,6 @@ function PageFront() {
     <DashboardLayout title="Lisa React App">
       {/* children */}
       <Grid container spacing={3}>
-        <div className="container p-2">
-          <div className="row">
-            <div className="col-6">
-              <RiskValueAwesome></RiskValueAwesome>
-              {/* <RiskValue></RiskValue> */}
-            </div>
-          </div>
-        </div>
-
         <Grid item xs={12} md={8} lg={9}>
           <Paper className={fixedHeightPaper}></Paper>
         </Grid>
