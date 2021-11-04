@@ -1,6 +1,6 @@
 import React from 'react'
 
-import DashboardLayout from '../components_dashboard_layout/dashboard_layout'
+import DashboardLayout from '../components_dashboard_layout/dashboard_layout' // Lisa dashboard
 import Content from '../components/content'
 
 import ChartLine from '../components/chart/chart_line'
