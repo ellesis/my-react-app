@@ -1,24 +1,40 @@
+/**
+ * eChart의 data 값이 제대로 안나온다.
+ */
 import React from 'react'
-// import { useRef, useState, useEffect } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import ReactEcharts from 'echarts-for-react'
 // import * as echarts from 'echarts'
 // import * as echarts from 'echarts/core'
+import { StockDJIData } from '../../data/stock-DJI'
 
 const ChartCandlestickBrush = () => {
   // var ROOT_PATH = 'https://echarts.apache.org/examples'
-  const rawData = require('../../data/stock-DJI.json')
+  // const rawData = require('../../data/stock-DJI.json')
+  const importData = require('../../data/stock-DJI.json')
+
+  const [rawData, setRawData] = useState(null)
+  // setRawData(StockDJIData)
+  console.log('>>>: ChartCandlestickBrush -> rawData', rawData)
 
   const upColor = '#00da3c'
   const downColor = '#ec0000'
 
+  useEffect(() => {
+    setRawData(importData)
+  }, [importData])
+
   function splitData(rawData) {
+    console.log('>>>: splitData -> rawData', rawData)
     let categoryData = []
     let values = []
     let volumes = []
-    for (let i = 0; i < rawData.length; i++) {
-      categoryData.push(rawData[i].splice(0, 1)[0])
-      values.push(rawData[i])
-      volumes.push([i, rawData[i][4], rawData[i][0] > rawData[i][1] ? 1 : -1])
+    if (rawData) {
+      for (let i = 0; i < rawData.length; i++) {
+        categoryData.push(rawData[i].splice(0, 1)[0])
+        values.push(rawData[i])
+        volumes.push([i, rawData[i][4], rawData[i][0] > rawData[i][1] ? 1 : -1])
+      }
     }
     return {
       categoryData: categoryData,
@@ -44,8 +60,8 @@ const ChartCandlestickBrush = () => {
   }
 
   // $.get(ROOT_PATH + '/data/asset/data/stock-DJI.json', function (rawData) {
-  console.log('>>>: ChartCandlestickBrush -> rawData', rawData)
   const data = splitData(rawData)
+  console.log('>>>: ChartCandlestickBrush -> data', data)
 
   const options = {
     animation: false,
