@@ -112,7 +112,6 @@ const DashboardLayout = ({ children, title }) => {
     setOpen(false)
   }
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight)
-  console.info('#: DashboardLayout -> fixedHeightPaper', fixedHeightPaper)
 
   return (
     <div className={classes.root}>

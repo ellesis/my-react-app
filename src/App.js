@@ -1,11 +1,10 @@
 import React from 'react'
-import 'ag-grid-community/dist/styles/ag-grid.css'
-import 'ag-grid-community/dist/styles/ag-theme-balham.css'
+import 'ag-grid-community/dist/styles/ag-grid.css' // ag-grid css
+import 'ag-grid-community/dist/styles/ag-theme-balham.css' // ag-grid balham theme css
 import './App.css'
-import './ag-grid.css'
+import './ag-grid.css' // ag-grid custom css
 
 import Dashboard from './components_dashboard/dashboard' // dashboard 페이지
-
 import DashboardAdmin from './pages/page_admin' // Lisa's dashboard 페이지
 import PageFront from './pages/page_front'
 import PageBootstrap from './pages/page_bootstrap'
@@ -22,7 +21,7 @@ function App() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/dashboard_admin" exact component={DashboardAdmin} />
+        <Route path="/admin" exact component={DashboardAdmin} />
         <Route path="/dashboard" exact component={Dashboard} />
         <Route path="/echarts" exact component={PageEcharts} />
         <Route path="/dailysales" exact component={PageDailySales} />
@@ -33,7 +32,7 @@ function App() {
         <Route path="/section_card" exact component={PageCard} />
         <Route path="/left-sidebar" exact component={PageLeftSidebar} />
 
-        <Route path="/" exact component={DashboardAdmin} />
+        <Route path="/" exact component={PageFront} />
       </Switch>
     </BrowserRouter>
   )
