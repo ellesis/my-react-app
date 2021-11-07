@@ -17,15 +17,15 @@ function PageFront() {
   return (
     <DashboardLayout title="Lisa React App">
       {/* children */}
-      <h2>page_front</h2>
+      <h2>page_test</h2>
       {/* tooltip */}
       <div className="container">
         <div className="row">
-          <h3>Tooltip</h3>
-          <div className="col-3">
+          <h3 className="text-indigo">Tooltip</h3>
+          <div className="col-3 text-indigo">
             click and show bottom tooltip&nbsp;
             <a data-tip="custom show - info" data-event="click focus">
-              <i className="fas fa-question-circle"></i>
+              <i className="fas fa-question-circle "></i>
             </a>
             <ReactTooltip place="right" globalEventOff="click" />
           </div>
@@ -89,6 +89,29 @@ function PageFront() {
           <div className="col-3 bg-primary">aaaaaa</div>
           <div className="col-3 bg-info bg-gradient">aaaaaa</div>
           <div className="col-3 bg-dark bg-gradient text-white">aaaaaa</div>
+        </div>
+
+        {/* https://getbootstrap.com/docs/5.0/components/spinners/ */}
+        <div className="h3">Bootstrap5 - loading button</div>
+        <button className="btn btn-primary">
+          <span className="spinner-border spinner-border-sm"></span>
+          Loading..
+        </button>
+
+        <button className="btn btn-primary" disabled>
+          <span className="spinner-grow spinner-grow-sm"></span>
+          Loading..
+        </button>
+        <div className="row">
+          <div className="spinner-border" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </div>
+          <div class="spinner-border text-warning" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <div class="spinner-grow text-success" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
         </div>
       </div>
     </DashboardLayout>

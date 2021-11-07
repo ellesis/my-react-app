@@ -14,6 +14,7 @@ import Transactions from './pages/page_transactions'
 import PageEcharts from './pages/page_echarts'
 import PageCard from './pages/page_card'
 import PageLeftSidebar from './pages/page-left-sidebar' // bootstrap sidebar template
+import PageTest from './pages/page_test'
 
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
@@ -31,8 +32,9 @@ function App() {
         <Route path="/bootstrap" exact component={PageBootstrap} />
         <Route path="/section_card" exact component={PageCard} />
         <Route path="/left-sidebar" exact component={PageLeftSidebar} />
+        <Route path="/test" exact component={PageTest} />
 
-        <Route path="/" exact component={PageFront} />
+        <Route path="/" exact component={DashboardAdmin} />
       </Switch>
     </BrowserRouter>
   )
